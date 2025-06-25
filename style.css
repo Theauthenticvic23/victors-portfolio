@@ -1,0 +1,303 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #0f172a;
+  color: #f1f5f9;
+  scroll-behavior: smooth;
+  padding-bottom: 4rem;
+}
+
+/* Background shapes */
+.bg-shape {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.shape1 {
+  width: 300px;
+  height: 300px;
+  background: #38bdf8;
+  top: -50px;
+  left: -50px;
+}
+
+.shape2 {
+  width: 200px;
+  height: 200px;
+  background: #facc15;
+  bottom: -50px;
+  right: -50px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1e293b;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f1f5f9;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* Hamburger Menu Toggle */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #f1f5f9;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    background: #0f172a;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .home-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gallery-row {
+    flex-direction: column;
+  }
+
+  .home-image-left img {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #38bdf8;
+}
+
+.section p,
+.section li {
+  margin-bottom: 1rem;
+}
+
+/* Home Section */
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.home-image-left img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+.home-content {
+  flex: 1;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #38bdf8;
+  color: #0f172a;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.spotify-btn {
+  background-color: #1db954;
+  color: white;
+}
+
+/* Project Cards / Services / Testimonials */
+.projects {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.project-card h3 {
+  color: #facc15;
+  margin-bottom: 0.5rem;
+}
+
+.project-card .link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #38bdf8;
+}
+
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skills span {
+  background: #334155;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+/* Gallery Row */
+.gallery-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.gallery-row img,
+.gallery-row video {
+  width: 30%;
+  border-radius: 10px;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+/* Podcast CTA */
+#podcast {
+  text-align: center;
+}
+
+/* Quote */
+blockquote {
+  font-style: italic;
+  color: #facc15;
+  padding: 1rem;
+  border-left: 5px solid #38bdf8;
+  background: #1e293b;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  padding: 2rem;
+  text-align: center;
+  background-color: #1e293b;
+  margin-top: 2rem;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #f1f5f9;
+}
+
+.social-icons a:hover {
+  color: #38bdf8;
+}
+/* --- Extra Small Screens --- */
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .home-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .skills span {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .gallery-row img,
+  .gallery-row video {
+    width: 100%;
+    max-height: 200px;
+  }
+
+  blockquote {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+}
